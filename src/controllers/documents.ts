@@ -17,7 +17,7 @@ export const listDocuments = (req: Request, res: Response): void => {
 };
 
 export const fetchDocument = (req: Request, res: Response): void => {
-  const id: string = req.params.id;
+  const id: string = typeof req.params.id === 'string' ? req.params.id : '';
   res.status(200).json({
     success: true,
     data: { id },
@@ -26,11 +26,7 @@ export const fetchDocument = (req: Request, res: Response): void => {
 };
 
 export const deleteDocument = (req: Request, res: Response): void => {
-  const id: string = req.params.id;
-  res.status(204).json({
-    success: true,
-    data: { id },
-    error: null,
-  });
+  const id: string = typeof req.params.id === 'string' ? req.params.id : '';
+  res.status(204).send();
 };
 

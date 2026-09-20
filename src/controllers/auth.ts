@@ -13,7 +13,7 @@ export const getCurrentUser = (req: Request, res: Response): void => {
   });
 };
 
-export const postCurrentLogin = (req: Request, res: Response): void => {
+export const login = (req: Request, res: Response): void => {
   res.status(201).json({
     success: true,
     data: {},
@@ -21,7 +21,7 @@ export const postCurrentLogin = (req: Request, res: Response): void => {
   })
 }
 
-export const postCurrentRegister = (req: Request, res: Response): void => {
+export const signup = (res: Response): void => {
   res.status(201).json({
     success: true,
     data: {},

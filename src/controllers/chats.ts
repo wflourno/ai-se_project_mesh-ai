@@ -9,13 +9,7 @@ export const postCreateChat = (req: Request, res: Response): void => {
 };
 
 export const deleteChat = (req: Request, res: Response): void => {
-  const id: string = req.params.id;
-
-  res.status(204).json({
-    success: true,
-    data: { id },
-    error: null,
-  });
+  res.status(204).send();
 };
 
 export const getChatsById = (req: Request, res: Response): void => {
